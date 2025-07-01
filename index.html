@@ -76,11 +76,7 @@
 
         <div class="result" id="result"></div>
 
-        <!-- Coin Flip Video with Audio -->
-        <video id="coinVideo" class="coin-video" width="200" autoplay>
-            <source src="WhatsApp Video 2024-10-11 at 01.23.58_3a6071df.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+       
     </div>
 
     <script>
@@ -105,17 +101,8 @@
                 return;
             }
 
-            // Show coin flip video and start it with audio
-            coinVideo.style.display = 'block';
-            coinVideo.play();
 
-            // Simulate the coin flip with a delay for the video
-            setTimeout(() => {
-                let coin = Math.floor(Math.random() * 2);  // 0 for heads, 1 for tails
-                let side = win === 'H' ? 0 : 1;  // H corresponds to 0, T corresponds to 1
 
-                // Hide the coin flip video after it ends
-                coinVideo.style.display = 'none';
 
                 if (coin === side) {
                     resultText.innerHTML = `You betted on ${win} and won!`;
